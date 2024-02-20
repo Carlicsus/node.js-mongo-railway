@@ -65,7 +65,7 @@
                         <li>Stock: <%= product.stock %></li>
                         <li>Fecha de Caducidad: <%= product.expiredDate %></li>
                         <li>Estatus: <%= product.status %></li>
-                        <li><a href="/api/products/<%= product.barcode%>" class="ui-btn">Editar</a></li>
+                        <li><a href="/<%= product.barcode%>" class="ui-btn">Editar</a></li>
                     </ul>
                 </div>
                 <% }) %>
