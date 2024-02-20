@@ -27,7 +27,7 @@ const insertOne = (req,res) =>{
 }
 const updateOne = (req,res) =>{
     productDAO.updateOne(req.params.barcode,req.body)
-    .then(result=>res.redirect("/api/products/"))
+    .then(result=>res.redirect("/"))
     .catch(err=>res.json({
         status:"Server unavailable"
     }))
@@ -35,7 +35,7 @@ const updateOne = (req,res) =>{
 const deleteOne = (req,res) =>{
     productDAO.deleteOne(req.params.barcode)
     .then(result=>{
-        !result?res.json({Status:`Barcode "${req.params.barcode}" Not Found :,(`}):res.redirect("/api/products/")
+        !result?res.json({Status:`Barcode "${req.params.barcode}" Not Found :,(`}):res.redirect("/")
     })
     .catch(err=>res.json({
         status:"Server unavailable"
