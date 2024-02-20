@@ -22,7 +22,7 @@ const getOne = (req,res) =>{
 const insertOne = (req,res) =>{
     const product= req.body
     productDAO.insertOne(product)
-    .then(result=>res.redirect("/api/products/"))
+    .then(result=>res.redirect("/"))
     .catch(err=>console.log("ño"))
 }
 const updateOne = (req,res) =>{
